@@ -116,39 +116,35 @@ let additions =
   }
 -------------------------------
 -}
-
-
 let upstream =
-      https://github.com/purescript/package-sets/releases/download/psc-0.14.0-20210307/packages.dhall sha256:5f9e009bf539a4d1fa2be3ea340aeca4e3ca69515f5e351473d722619906d0b0
+      https://github.com/purescript/package-sets/releases/download/psc-0.14.0-20210313/packages.dhall sha256:ba6368b31902aad206851fec930e89465440ebf5a1fe0391f8be396e2d2f1d87
 
 let overrides = {=}
 
-let additions = {
-    b64 =
+let additions =
+      { b64 =
         { dependencies =
-            [ "arraybuffer-types"
-            , "assert"
-            , "console"
-            , "effect"
-            , "either"
-            , "encoding"
-            , "enums"
-            , "exceptions"
-            , "functions"
-            , "partial"
-            , "prelude"
-            , "psci-support"
-            , "quickcheck"
-            , "strings"
-            , "stringutils"
-            , "unicode"
-            , "unsafe-coerce"
-            ]
-        , repo =
-            "https://github.com/CarstenKoenig/purescript-b64.git"
-        , version =
-            "purescript-0.14"  -- branch, tag, or commit hash
+          [ "arraybuffer-types"
+          , "assert"
+          , "console"
+          , "effect"
+          , "either"
+          , "encoding"
+          , "enums"
+          , "exceptions"
+          , "functions"
+          , "partial"
+          , "prelude"
+          , "psci-support"
+          , "quickcheck"
+          , "strings"
+          , "stringutils"
+          , "unicode"
+          , "unsafe-coerce"
+          ]
+        , repo = "https://github.com/menelaos/purescript-b64.git"
+        , version = "3aa40575e916de51d6655c35c26a92f33b10a1ef"
         }
-}
+      }
 
 in  upstream // overrides // additions
